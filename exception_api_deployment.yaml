@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: exception-api-deployment
+  labels:
+    app: exception-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: exception-api
+  template:
+    metadata:
+      labels:
+        app: exception-api
+    spec:
+      containers:
+      - name: exception-api
+        image: rdgc91/exception_api:v1
+        ports:
+        - containerPort: 6000
