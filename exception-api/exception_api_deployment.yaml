@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: exception-api
-        image: rdgc91/exception_api:v1
+        image: rdgc91/exception_api:v2
         ports:
         - containerPort: 6000
